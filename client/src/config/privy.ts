@@ -31,10 +31,10 @@ export const privyConfig: PrivyClientConfig = {
 
   
   // Configure Solana RPC endpoints to use environment variable
-  solanaClusters: [
+    solanaClusters: [
     {
-      name: environment.SOLANA_NETWORK === 'devnet' ? 'devnet' : 'mainnet-beta',
-      rpcUrl: environment.SOLANA_RPC_URL,
+      name: 'mainnet-beta',
+      rpcUrl: 'https://api.mainnet-beta.solana.com',
     },
   ],
   

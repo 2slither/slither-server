@@ -6,21 +6,27 @@ export default defineConfig({
   plugins: [
     react(),
     nodePolyfills({
-      // Enable polyfills for specific globals and modules
       globals: {
         Buffer: true,
         global: true,
         process: true,
       },
-      // Enable polyfills for specific modules
       protocolImports: true,
-    })
+    }),
   ],
   root: 'client',
-  envDir: '../', // Look for .env files in the project root
+  envDir: '../',
   build: {
     outDir: '../dist-client',
     emptyOutDir: true,
+  },
+  optimizeDeps: { // <-- ADD THIS ENTIRE BLOCK
+    include: [
+      '@solana/kit',
+      '@solana-program/system',
+      '@solana-program/token',
+      '@solana-program/memo',
+    ],
   },
   server: {
     port: 5173,
@@ -44,7 +50,4 @@ export default defineConfig({
       '@utils': '/src/utils',
     },
   },
-  define: {
-    global: 'globalThis',
-  },
-}) 
+})

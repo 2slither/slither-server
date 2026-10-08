@@ -7,23 +7,23 @@ export const GAME_CONFIG = {
     SNAKE_SPEED: 200, // pixels per second
     SNAKE_BOOST_SPEED: 400, // boost speed in pixels per second
     FOOD_SIZE: 8,
-    FOOD_ATTRACTION_RADIUS: 100, // Radius where food starts gravitating towards snake head  
+    FOOD_ATTRACTION_RADIUS: 1, // Radius where food starts gravitating towards snake head  
     FOOD_CONSUMPTION_DISTANCE: 8, // Distance at which food gets consumed (much smaller)
-    FOOD_DENSITY: 0.00010, // Number of food particles per world unit squared
+    FOOD_DENSITY: 0.00005, // Number of food particles per world unit squared
     GRID_SIZE: 80,
     TICK_RATE: 60, // server updates per second (increased from 30 to 60)
     CAMERA_SMOOTH_FACTOR: 0.25, // Increased from 0.15 for more responsive camera
-    ZOOM_MIN: 1,
-    ZOOM_MAX: 3,
+    ZOOM_MIN: 0.75,
+    ZOOM_MAX: 1,
     ZOOM_SCALE_FACTOR: 0.8, // How much zoom changes with snake size
     THICKNESS_SCALE_FACTOR: 0.075, // How much thickness increases with length (0.1 = 10% of length)
-    VISUAL_LENGTH_FACTOR: 0.5, // How long the snake appears visually (1.0 = 1 segment per length unit)
+    VISUAL_LENGTH_FACTOR: 0.4, // How long the snake appears visually (1.0 = 1 segment per length unit)
     FOOD_LENGTH_MIN: 1, // Length increment for small food
-    FOOD_LENGTH_MAX: 3, // Length increment for large food
-    DEATH_FOOD_MULTIPLIER: 1, // How much food is dropped when snake dies
-    INTERPOLATION_FACTOR: 0.05, // Reduced from 0.15 for smoother interpolation
-    BORDER_WIDTH: 25, // Width of the red kill border
-    SNAKE_TURN_RATE: 5, // radians per second
+    FOOD_LENGTH_MAX: 2, // Length increment for large food
+    DEATH_FOOD_MULTIPLIER: 0.7, // How much food is dropped when snake dies
+    INTERPOLATION_FACTOR: 0.08, // Reduced from 0.15 for smoother interpolation
+    BORDER_WIDTH: 50, // Width of the red kill border
+    SNAKE_TURN_RATE: 3.5, // radians per second
     PLAYER_VIEW_RADIUS: 2000, // Half of typical max viewport width (1600) plus buffer
     BOT_COUNT: 2, // Number of AI bots to spawn for testing
     SPATIAL_GRID_CELL_SIZE: 500, // Cell size for spatial grid, tuned for 1000px view radius
