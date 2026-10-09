@@ -16,7 +16,7 @@ export const privyConfig: PrivyClientConfig = {
   
   // Embedded wallet configuration - ONLY Solana
   embeddedWallets: {
-    createOnLogin: 'users-without-wallets',
+    createOnLogin: 'off',
     requireUserPasswordOnCreate: false,
     // Disable Ethereum wallets completely
     ethereum: {
@@ -24,7 +24,7 @@ export const privyConfig: PrivyClientConfig = {
     },
     // Enable ONLY Solana wallets and force recreation
     solana: {
-      createOnLogin: 'users-without-wallets',
+      createOnLogin: 'off',
     },
   },
   
